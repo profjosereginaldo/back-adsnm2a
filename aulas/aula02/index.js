@@ -14,11 +14,15 @@ function menu() {
 function escolherOpcao(opcao) {
   switch (opcao) {
     case "1":
-      controlador.listar();
+      const contatos = controlador.listar();
+      contatos.forEach()
       break;
-    case "2":
-      controlador.criar();
+    case "2": {
+      const nome = readline.question("Entre com o nome do produto: ");
+      const preco = readline.question("Entre com o preco do produto: ");    
+      controlador.criar(nome, preco);
       break;
+    }
     case "3":
       controlador.buscar();
       break;
